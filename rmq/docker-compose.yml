@@ -40,7 +40,7 @@ services:
     container_name: rmqbroker1
     ports:
       - 10810:10909
-      - 10811:10911
+      - 10911:10911
     volumes:
       - ./rmq1/logs:/home/rocketmq/logs
       - ./rmq1/store:/home/rocketmq/store
@@ -62,7 +62,7 @@ services:
     container_name: rmqbroker1_slave
     ports:
       - 10812:10909
-      - 10813:10911
+      - 10912:10912
     volumes:
       - ./rmq1-slave/logs:/home/rocketmq/logs
       - ./rmq1-slave/store:/home/rocketmq/store
@@ -86,7 +86,7 @@ services:
     container_name: rmqbroker2
     ports:
       - 10814:10909
-      - 10815:10911
+      - 10913:10913
     volumes:
       - ./rmq2/logs:/home/rocketmq/logs
       - ./rmq2/store:/home/rocketmq/store
@@ -109,7 +109,7 @@ services:
     container_name: rmqbroker2_slave
     ports:
       - 10816:10909
-      - 10817:10911
+      - 10914:10914
     volumes:
       - ./rmq2-slave/logs:/home/rocketmq/logs
       - ./rmq2-slave/store:/home/rocketmq/store
@@ -150,3 +150,4 @@ networks:
   rmq:
     name: rmq
     driver: bridge
+    # driver: host
